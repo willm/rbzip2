@@ -47,7 +47,7 @@ bz2.close                           # finish compression (important!)
 ```ruby
 file = File.new 'somefile.bz2'        # open a compressed file
 bz2  = RBzip2.default_adapter::Decompressor.new file  # wrap the file into the decompressor
-data = io.read                        # read data into a string
+data = bz2.read                        # read data into a string
 ```
 
 ## Future plans
